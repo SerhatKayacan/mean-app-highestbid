@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myFormApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body ng-controller="myFormController">
+    <div>
+      <input type="number" ng-model="number1" />
+      <button ng-click="putnumber1()">put</button>
+      <br />
+      <input type="number" ng-model="number2" />
+      <button ng-click="putnumber2()">put</button>
+      <br />
+      <button ng-click="getnumbers()">get</button>
+      <p>highest bid: {{ highbid }}</p>
+    </div>
+  </body>
+</html>
