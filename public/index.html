@@ -3,17 +3,57 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="./app.js"></script>
+    <meta name="viewport" content="" />
+    <style>
+      .main {
+        margin-top: 100px;
+      }
+      .number1 {
+        float: left;
+        margin-left: 100px;
+      }
+      .number2 {
+        margin-left: 500px;
+      }
+      .sonuc {
+        margin-top: 100px;
+        margin-left: 250px;
+      }
+      p {
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      @media only screen and (max-width: 700px) {
+        .number1 {
+          float: none;
+          margin-left: 0;
+        }
+        .number2 {
+          margin-left: 0;
+        }
+        .sonuc {
+          margin-top: 0;
+          margin-left: 0;
+        }
+      }
+    </style>
   </head>
   <body ng-controller="myFormController">
-    <div>
-      <input type="number" ng-model="number1" />
-      <button ng-click="putnumber1()">put</button>
-      <br />
-      <input type="number" ng-model="number2" />
-      <button ng-click="putnumber2()">put</button>
-      <br />
-      <button ng-click="getnumbers()">get</button>
-      <p>highest bid: {{ highbid }}</p>
+    <div class="main">
+      <div class="number1">
+        <input type="number" ng-model="number1" placeholder="bid" />
+        <button ng-click="putnumber1()">put</button>
+        <br />
+      </div>
+      <div class="number2">
+        <input type="number" ng-model="number2" placeholder="bid" />
+        <button ng-click="putnumber2()">put</button>
+        <br />
+      </div>
+      <div class="sonuc">
+        <button ng-click="getnumbers()">get</button>
+        <p>highest bid: {{ highbid }}</p>
+      </div>
     </div>
   </body>
 </html>
